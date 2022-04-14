@@ -10,9 +10,9 @@ jobs:
           pip install pytest
           python3 main.py
           pytest
-      # - name: build docker image
-      #   run: |
-      #     docker build -t test .
-      # - name: run docker image
-      #   run: |
-      #     docker run test
+      - name: build docker image
+        run:
+          docker build -t test .
+      - name: run docker image
+        run:
+          docker run test
