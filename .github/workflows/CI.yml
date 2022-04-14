@@ -4,11 +4,10 @@ jobs:
   test_build_run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v3
+      - uses: actions/checkout@v2
       - name: Run tests
         run: |
           pip install pytest
-          python3 main.py
           pytest
       # - name: build docker image
       #   run: |
